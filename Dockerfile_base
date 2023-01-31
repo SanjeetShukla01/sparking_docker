@@ -3,11 +3,6 @@ FROM openjdk:8-jdk-alpine
 
 LABEL maintainer="Sanjeet Shukla <sanjeet.shukla089@gmail.com>"
 
-# COPY root(/) filesystem of the python:3.6 image into the root directory of the container being built.
-COPY --from=python:3.6 / /
-
-RUN apk add --no-cache python3=3.9.0-r2
-
 # Set env variables
 ENV BASE_URL=https://archive.apache.org/dist/spark/
 ENV DAEMON_RUN=true
@@ -21,12 +16,13 @@ ENV PYTHONPATH $SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.10.7-src.zip
 
 
 # Below command updates(--update) the package database and then adds(installs) following packages
-# wget, tar, bash, coreutils, porpcs, openssl
+    ``# wget, tar, bash, coreutils, porpcs, openssl
 
 RUN apk --update add wget tar bash coreutils procps openssl
 
 # Install Scala and other packages
-RUN apk add --no-cache --virtual=.build-dependencies wget ca-certificates && \
+RUN apk add --no-cache:q python3 py-pip && \
+    apk add --no-cache --virtual=.build-dependencies wget ca-certificates && \
     apk add --no-cache bash && \
     cd "/tmp" && \
     wget "https://downloads.typesafe.com/scala/${SCALA_VERSION}/scala-${SCALA_VERSION}.tgz" && \
