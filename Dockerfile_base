@@ -16,7 +16,7 @@ ENV PYTHONPATH $SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.10.7-src.zip
 
 
 # Below command updates(--update) the package database and then adds(installs) following packages
-    ``# wget, tar, bash, coreutils, porpcs, openssl
+# wget, tar, bash, coreutils, porpcs, openssl
 
 RUN apk --update add wget tar bash coreutils procps openssl
 
