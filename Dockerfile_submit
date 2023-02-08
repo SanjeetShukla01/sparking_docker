@@ -1,4 +1,4 @@
-FROM sanjeet01/spark_base
+FROM sanjets/spark_base
 
 # Set default environment variables. These can also be set at the command line when invoking /bin/spark-submit
 ENV MASTER_CONTAINER_NAME=spark-master
@@ -6,7 +6,7 @@ ENV SPARK_EXECUTOR_MEMORY=6G
 ENV SPARK_EXECUTOR_CORES=3
 
 # Install libraries
-COPY ./resources/requirements.txt .
+COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 
 # Copy examples python files into container
