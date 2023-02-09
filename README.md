@@ -32,3 +32,6 @@ The default command in the image is overridden by the --entrypoint option to sta
 docker build -t sanjets/spark_submit -f Dockerfile_submit .
 
 
+In order to launch pyspark prompt in base image. Follow below command
+    go to pyspark directory and run this command ```. pyspark```
+
