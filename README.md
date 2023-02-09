@@ -21,3 +21,7 @@ The docker run command you provided starts a Docker container in detached (-d), 
 This docker run command will start a container based on the sdesilva26/spark_master:0.0.2 image and will attach
 it to the spark-net-bridge network. The container will run in detached mode, so it will run in the background. 
 The default command in the image is overridden by the --entrypoint option to start a bash shell inside the container.
+
+
+docker build -t sanjets/spark_submit -f Dockerfile_submit .
+
