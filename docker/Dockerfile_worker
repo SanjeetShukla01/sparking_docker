@@ -1,8 +1,8 @@
-FROM sanjeet01/spark_base
+FROM sanjets/spark_base
 
 ENV MASTER_CONTAINER_NAME=spark-master
 ENV CORES=3
-ENV MEMORY=6G
+ENV MEMORY=2G
 ENV SPARK_WORKER_WEBUI_PORT 8081
 ENV SPARK_WORKER_LOG /spark/logs
 
