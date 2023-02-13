@@ -34,6 +34,7 @@ docker build -t sanjets/spark_submit -f Dockerfile_submit .
 In order to launch pyspark prompt in base image. Follow below command
     go to pyspark directory and run this command ```. pyspark```
 
+
 docker create network -d bridge spark-net
 
 docker run -dit --name spark-master --network spark-net-bridge --entrypoint /bin/bash sdesilva26/spark_master:0.0.2
