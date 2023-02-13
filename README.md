@@ -43,3 +43,8 @@ docker run -dit --name spark-master --network spark-net-bridge --entrypoint /bin
 
 docker build -t sanjets/spark_master -f Dockerfile_master .
 
+
+ToDo: Test and add instruction 
+ToDo: reclone repo to get rid of rebase error
+
+
