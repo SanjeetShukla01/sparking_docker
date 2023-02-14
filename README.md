@@ -47,4 +47,5 @@ docker build -t sanjets/spark_master -f Dockerfile_master .
 ToDo: Test and add instruction 
 ToDo: reclone repo to get rid of rebase error
 
+Point 2 in todo is done, need to test it
 
